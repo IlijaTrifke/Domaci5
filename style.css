@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope";
+}
+
+section {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  height: 90vh;
+  width: 40rem;
+  box-shadow: 60px 60px 120px #272727, -30px -30px 50px #ffffff;
+  border-radius: 1rem;
+}
+
+body {
+  background-color: #d8d8d8;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+.date {
+  display: flex;
+  user-select: none;
+  gap: 0.5rem;
+}
+
+.day {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #272727;
+}
+.month-year {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #727272;
+  font-size: 1.2rem;
+}
+.days {
+  display: flex;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  color: #272727;
+  user-select: none;
+}
+.hero {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  height: 60%;
+  width: 70%;
+  border-radius: 1rem;
+  padding: 5% 5%;
+  user-select: none;
+}
+.hero-heading {
+  color: #727272;
+  margin-bottom: 10%;
+  user-select: none;
+}
+.circle {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #727272;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.15s;
+}
+.plus {
+  color: #272727;
+  font-size: 3.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  user-select: none;
+}
+#task {
+  border: none;
+  padding: 0.5rem;
+  margin-bottom: 2%;
+  width: 55%;
+  transition: width 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  outline-color: #727272;
+  outline-style: auto;
+  opacity: 60%;
+}
+
+#task:focus {
+  width: 100%;
+  opacity: 100%;
+}
+.circle:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  background-color: #333333;
+  transition: 0.125s;
+}
+.circle:hover .plus {
+  color: #d8d8d8;
+  transition: 0.125s;
+}
+
+.newTask {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newTask p {
+  font-size: 1.4rem;
+  overflow: hidden;
+}
+
+.newTask input {
+  font-size: 1.4rem;
+  border: none;
+  color: #727272;
+  outline-color: #727272;
+  outline-style: auto;
+}
+
+.task-list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #707070;
+}
+.buttons {
+  cursor: pointer;
+  display: flex;
+  font-size: 1.4rem;
+  gap: 1rem;
+  user-select: none;
+}
+.checked {
+  color: #727272;
+  text-decoration: line-through;
+  transition: 0.125s;
+}
+i {
+  transition: 0.125s;
+}
+i:hover {
+  transform: scale(1.3);
+}
+
+.biggerMargin {
+  margin-left: 1.5rem;
+}
+
+.blur {
+  opacity: 30%;
+  transition: 0.125s;
+}
+
+.biggerScale {
+  transform: scale(1.5);
+  color: #ff0000;
+}
+.biggerScale:hover {
+  transform: scale(1.8);
+}
+
+.fa-check-circle {
+  color: #00c000;
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    width: 20rem;
+  }
+}
