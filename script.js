@@ -105,39 +105,6 @@ ul.addEventListener("click", (e) => {
   }
 });
 
-// list.addEventListener("click", (e) => {
-//   if (
-//     e.target.classList.contains("fa-pen-to-square") &&
-//     e.target.classList.contains("edit")
-//   ) {
-//     const par = document.querySelector(".newItem");
-//     const editPar = par.children[0].innerHTML;
-//     const input = document.createElement("input");
-//     input.type = "text";
-//     input.value = editPar;
-//     list.firstElementChild.insertBefore(input, par);
-//     console.log(par);
-//     console.log(list.children[0].children[1].children[0]);
-//     list.children[0].children[1].children[0].remove();
-//     e.target.classList.remove("edit");
-//     e.target.classList.add("save");
-//   } else if (
-//     e.target.classList.contains("fa-pen-to-square") &&
-//     e.target.classList.contains("save")
-//   ) {
-//     const dunja = document.querySelector(".newItem");
-//     const par = list.children[0].children[0].value;
-//     list.children[0].children[0].remove;
-//     const editPar = document.createElement("p");
-//     editPar.textContent = par;
-//     dunja.classList.add("dunja");
-//     list.firstElementChild.insertBefore(editPar, dunja);
-//     list.children[0].children[0].remove();
-//     e.target.classList.remove("save");
-//     e.target.classList.add("edit");
-//   }
-// });
-
 const date = new Date();
 
 const day = date.getDate();
@@ -168,30 +135,31 @@ const godina = date.getFullYear();
 const year = document.querySelector(".month-year");
 year.lastElementChild.innerHTML = godina;
 
-let dayOfWeekContainer = document.querySelector(".days");
-
-switch (new Date().getDay()) {
+let daysContainer = document.querySelector(".days");
+console.log(daysContainer.parentElement);
+// new Date().getDay()
+switch (2) {
   case 0:
-    dayOfWeekContainer.scrollLeft = 0;
-    dayOfWeekContainer.classList.add("biggerMargin");
+    daysContainer.scrollLeft = 0;
+    // daysContainer.classList.add("biggerMargin");
     break;
   case 1:
-    dayOfWeekContainer.scrollLeft = 115;
+    daysContainer.scrollLeft = 115;
     break;
   case 2:
-    dayOfWeekContainer.scrollLeft = 255;
+    daysContainer.scrollLeft = 255;
     break;
   case 3:
-    dayOfWeekContainer.scrollLeft = 395;
+    daysContainer.scrollLeft = 395;
     break;
   case 4:
-    dayOfWeekContainer.scrollLeft = 520;
+    daysContainer.scrollLeft = 520;
     break;
   case 5:
-    dayOfWeekContainer.scrollLeft = 670;
+    daysContainer.scrollLeft = 670;
     break;
   case 6:
-    dayOfWeekContainer.scrollLeft = 800;
+    daysContainer.scrollLeft = 800;
     break;
   default:
 }
