@@ -137,7 +137,7 @@ year.lastElementChild.innerHTML = godina;
 
 let daysContainer = document.querySelector(".days");
 // new Date().getDay()
-switch (6) {
+switch (new Date().getDay()) {
   case 0:
     daysContainer.scrollLeft = 0;
     daysContainer.children[0].classList.add("shaded");
