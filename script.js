@@ -136,30 +136,49 @@ const year = document.querySelector(".month-year");
 year.lastElementChild.innerHTML = godina;
 
 let daysContainer = document.querySelector(".days");
-console.log(daysContainer.parentElement);
 // new Date().getDay()
-switch (2) {
+switch (6) {
   case 0:
     daysContainer.scrollLeft = 0;
-    // daysContainer.classList.add("biggerMargin");
+    daysContainer.children[0].classList.add("shaded");
+    daysContainer.children[1].classList.add("bolded");
+    daysContainer.children[2].classList.add("shaded");
     break;
   case 1:
-    daysContainer.scrollLeft = 115;
+    daysContainer.scrollLeft = 220;
+    daysContainer.children[1].classList.add("shaded");
+    daysContainer.children[2].classList.add("bolded");
+    daysContainer.children[3].classList.add("shaded");
     break;
   case 2:
-    daysContainer.scrollLeft = 255;
+    daysContainer.scrollLeft = 430;
+    daysContainer.children[2].classList.add("shaded");
+    daysContainer.children[3].classList.add("bolded");
+    daysContainer.children[4].classList.add("shaded");
     break;
   case 3:
-    daysContainer.scrollLeft = 395;
+    daysContainer.scrollLeft = 680;
+    daysContainer.children[3].classList.add("shaded");
+    daysContainer.children[4].classList.add("bolded");
+    daysContainer.children[5].classList.add("shaded");
     break;
   case 4:
-    daysContainer.scrollLeft = 520;
+    daysContainer.scrollLeft = 940;
+    daysContainer.children[4].classList.add("shaded");
+    daysContainer.children[5].classList.add("bolded");
+    daysContainer.children[6].classList.add("shaded");
     break;
   case 5:
-    daysContainer.scrollLeft = 670;
+    daysContainer.scrollLeft = 1160;
+    daysContainer.children[5].classList.add("shaded");
+    daysContainer.children[6].classList.add("bolded");
+    daysContainer.children[7].classList.add("shaded");
     break;
   case 6:
-    daysContainer.scrollLeft = 800;
+    daysContainer.scrollLeft = 1380;
+    daysContainer.children[6].classList.add("shaded");
+    daysContainer.children[7].classList.add("bolded");
+    daysContainer.children[8].classList.add("shaded");
     break;
   default:
 }
